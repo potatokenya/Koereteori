@@ -33,7 +33,7 @@
 [ext_resource path="res://Assets/yesstar.png" type="Texture" id=31]
 [ext_resource path="res://Assets/nostar.png" type="Texture" id=32]
 [ext_resource path="res://Assets/Sounds/videogame-menu-button-click.wav" type="AudioStream" id=33]
-[ext_resource path="res://Assets/help.png" type="Texture" id=34]
+[ext_resource path="res://Assets/real help.png" type="Texture" id=34]
 [ext_resource path="res://Assets/left-arrow-symbol-characters-sticker-removebg-preview.png" type="Texture" id=35]
 [ext_resource path="res://Assets/bs/close.png" type="Texture" id=36]
 [ext_resource path="res://Assets/bs/close-kopi 2.png" type="Texture" id=37]
@@ -595,7 +595,6 @@ custom_fonts/font = SubResource( 31 )
 text = "Læs tutorial"
 
 [node name="help" type="TextureRect" parent="."]
-visible = false
 margin_left = 163.0
 margin_top = 79.0
 margin_right = 863.0
