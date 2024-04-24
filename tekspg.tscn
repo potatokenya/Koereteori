@@ -1,0 +1,352 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Assets/Font/harbor-nebula-demo-version/Harbor Nebula DEMO VERSION.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Font/nexa/Nexa-Heavy.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/Font/harbor-nebula-demo-version/Harbor Nebula Italic DEMO VERSION.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/dæk.png" type="Texture" id=4]
+[ext_resource path="res://Assets/sprinklervæske.png" type="Texture" id=5]
+[ext_resource path="res://Assets/liquid.png" type="Texture" id=6]
+[ext_resource path="res://Assets/bremsevæske.png" type="Texture" id=7]
+[ext_resource path="res://Assets/motoroile.png" type="Texture" id=8]
+[ext_resource path="res://Assets/back.png" type="Texture" id=9]
+[ext_resource path="res://tekspg.gd" type="Script" id=10]
+[ext_resource path="res://Assets/Back_-_M (1).png" type="Texture" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 42
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 30
+outline_size = 1
+outline_color = Color( 0.341176, 0.337255, 0.337255, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=6]
+extra_spacing_top = 2
+font_data = ExtResource( 2 )
+
+[node name="tekspg" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource( 2 )
+script = ExtResource( 10 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 1, 0.776471, 0.776471, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_left = 111.0
+margin_top = 2.0
+margin_right = 1021.0
+margin_bottom = 600.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+margin_right = 887.0
+margin_bottom = 3203.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+
+[node name="titel" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_right = 887.0
+margin_bottom = 40.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Tekniske spørgsmål"
+align = 1
+clip_text = true
+
+[node name="Intro" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 44.0
+margin_right = 829.0
+margin_bottom = 137.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "
+Når du skal til køreprøve er det vigtigt at du får en god start, så du kan ACE dine tekniske spørgsmål, men 
+de kan være lidt overvældende at få styr på.  
+"
+align = 1
+
+[node name="lys2" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 141.0
+margin_right = 887.0
+margin_bottom = 170.0
+custom_colors/font_color = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_colors/font_outline_modulate = Color( 0.356863, 0.356863, 0.356863, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Alt om lys"
+
+[node name="lys_t" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 174.0
+margin_right = 887.0
+margin_bottom = 925.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Alle lygter og reflekser skal være rene og hele og kunne lyse.
+Lygter i et lygtepar skal have ens farve og lysstyrke.
+Forlystelseslyset skal være hvidt eller gulligt.
+​
+	- Positionslys: 2 stk. skal kunne ses på 300 m afstand, må ikke blænde.
+	
+	- Nærlys: 2 stk. skal oplyse vejen mindst 30 m uden at blænde. Lyset skal falde med 1%, skal lyse 
+	  asymmetrisk til højre. Stå helt op af nærlyset og derefter marker hvor lyset rammer dit ben. Bagefter tager
+	  tager du et skridt tilbage på 1 m og tjekker om lyset falder med 1 cm. 
+		
+	- Fjernlys: 2 stk. skal oplyse vejen mindst 100 m. Blå kontrollampe lyser i instrumentpanelet.
+	
+	- Baglygter: 2 stk. skal kunne ses på 300 m afstand uden at blænde.
+	
+	- Stoplygter: 3 stk. skal lyse væsentlig kraftigere end baglygterne.
+	
+	- Nummerpladelys: hvidt, skal lyse så den bagerste nummerplade tydeligt kan aflæses på 20 m afstand.
+	
+	- Reflekser: 2 stk. røde bagpå og de må ikke være trekantede.
+	
+	- Blinklys: 2 stk. foran, 2 stk. bagpå og 1 på hver side. Gult lys, der tydeligt kan ses i sollys, blinker 
+	   1-2 gange i sekundet.
+	
+	- Havariblink skal kunne tænde alle blinklys samtidig.
+
+Du skal kunne teste nærlys til den praktiske prøve. Dette gøres ved at tænde for fjernlyset inde i bilen, 
+stille dig helt op til bilen, aflæse hvor lyset går til dit ben, træde et STORT skridt tilbage. Her burde du 
+kunne konstatere at lyset er faldet med ca. 1 cm. 
+"
+
+[node name="ratslør" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 929.0
+margin_right = 887.0
+margin_bottom = 958.0
+custom_colors/font_color = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_colors/font_outline_modulate = Color( 0.356863, 0.356863, 0.356863, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Ratslør"
+
+[node name="ratslør_t" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 962.0
+margin_right = 887.0
+margin_bottom = 1141.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Der må ikke være ratslør, for hjulene skal straks følge rattets mindste bevægelser.
+
+Du skal kunne teste for ratslør: Testen foretages med startet motor. Du skal rulle vinduerne ned, lukke døren og 
+dreje på rattet ud fra bilen. Herefter skal du kunne konstatere at hjulene følger rattets bevægelser. Når du er 
+færdig med det forreste venstre hjul, så spørg sagkyndige om du skal tjekke for resten. 
+(De siger højst sandsynligt nej) 
+"
+
+[node name="hornet" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1145.0
+margin_right = 887.0
+margin_bottom = 1174.0
+custom_colors/font_color = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_colors/font_outline_modulate = Color( 0.356863, 0.356863, 0.356863, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Hornet"
+
+[node name="hornet_t" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1178.0
+margin_right = 887.0
+margin_bottom = 1227.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Hornet skal have en klar konstant tone. Dette kan evt. testes ved at trykke på hornet.
+"
+
+[node name="wheel" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1231.0
+margin_right = 887.0
+margin_bottom = 1260.0
+custom_colors/font_color = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_colors/font_outline_modulate = Color( 0.356863, 0.356863, 0.356863, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Dæk"
+
+[node name="wheel_t" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1264.0
+margin_right = 887.0
+margin_bottom = 1339.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Alle dæk skal have mindst 1,6 mm dybde i hovedmønstret på alle hjul. 
+Du skal kunne tjekke dækkenes mønster. Dette gøres ved at finde slidindikatorer på hjulet, og konstatere at hjulet
+ikke er slidt helt ned til indikatoren. "
+
+[node name="wheel_p" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1343.0
+margin_right = 887.0
+margin_bottom = 1527.0
+texture = ExtResource( 4 )
+
+[node name="wheel_t2" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1531.0
+margin_right = 887.0
+margin_bottom = 1606.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Ud over det skal dækkene og fælge skal være ubeskadigede, samt skal alle dæk skal være af samme type
+(vinterhjul, sommerhjul, helårs)
+"
+
+[node name="stød" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1610.0
+margin_right = 887.0
+margin_bottom = 1639.0
+custom_colors/font_color = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_colors/font_outline_modulate = Color( 0.356863, 0.356863, 0.356863, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Støddæmpere"
+
+[node name="stød_t" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1643.0
+margin_right = 887.0
+margin_bottom = 1822.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Støddæmperne skal virke på alle hjul, og bilen skal straks gå i ro efter en kraftig påvirkning. For at teste 
+støddæmperne praktisk, skal du trykke kraftigt ned over dem på hver side af bilen. Efter et kraftigt tryk burde
+ bilen falde til ro efter kun få rystninger. Når du har testet et hjul, kan du spørge sagkyndigen, om du skal tjekke 
+resten af hjulene (de svarer sandsynligvis nej).
+
+Hvis du skal tjekke baghjulene, skal du åbne bagagerummet.
+"
+
+[node name="motor" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1826.0
+margin_right = 887.0
+margin_bottom = 1855.0
+custom_colors/font_color = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_colors/font_outline_modulate = Color( 0.356863, 0.356863, 0.356863, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Motorrummet"
+
+[node name="motor_t" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1859.0
+margin_right = 887.0
+margin_bottom = 1986.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Motorrummet skal være rent, hvilket betyder, at der ikke må være noget let antændeligt, såsom papir eller tørre 
+blade. Der er fire væsker, du skal kunne kontrollere inde i motorrummet: sprinklervæske, bremsevæske, 
+kølervæske og motorolie.
+
+Sprinklervæsken har tegnet:"
+
+[node name="motor_p" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1990.0
+margin_right = 887.0
+margin_bottom = 2163.0
+texture = ExtResource( 5 )
+
+[node name="motor_t5" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 2167.0
+margin_right = 887.0
+margin_bottom = 2216.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Sprinklervæsken skal være påfyldt i tilstrækkelig mængde (nok til turen).
+"
+
+[node name="motor_t2" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 2220.0
+margin_right = 887.0
+margin_bottom = 2243.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Kølervæske har tegnet:"
+
+[node name="motor_p2" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+margin_top = 2247.0
+margin_right = 887.0
+margin_bottom = 2449.0
+texture = ExtResource( 6 )
+
+[node name="motor_t3" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 2453.0
+margin_right = 887.0
+margin_bottom = 2554.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "For kølervæske skal du også kunne aflæse, at væskestanden er mellem minimum og maximum ud fra 
+væskebeholderen. 
+
+Bremsevæsken har tegnet:"
+
+[node name="motor_p3" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+margin_top = 2558.0
+margin_right = 887.0
+margin_bottom = 2775.0
+texture = ExtResource( 7 )
+
+[node name="motor_t4" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 2779.0
+margin_right = 887.0
+margin_bottom = 2880.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Bremsevæske-standen skal være mellem min. og max. Mærket
+Når du kontrollerer bremsevæsken, skal standen befinde sig mellem mærkerne for min. og max.
+
+Motorolie har tegnet:"
+
+[node name="motor_p4" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+margin_top = 2884.0
+margin_right = 887.0
+margin_bottom = 3046.0
+texture = ExtResource( 8 )
+
+[node name="motor_t6" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 3050.0
+margin_right = 887.0
+margin_bottom = 3203.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Motorolien skal være mellem maximum og minimum. 
+Hvis du bliver bedt om at kontrollere, at mængden af motorolie er tilfredsstillende, skal du sikre
+ dig, at måleren står mellem min. og max. Dette gøres ved at tage en klud frem, hive pinden ud, 
+tørrer pinden af, stikke den ned igen, hive den op og konstatere at oliestanden er mellem min og max.   
+
+"
+
+[node name="back" type="TextureButton" parent="."]
+margin_left = 23.0
+margin_top = 17.0
+margin_right = 675.0
+margin_bottom = 663.0
+rect_scale = Vector2( 0.1, 0.1 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 11 )
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

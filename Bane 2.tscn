@@ -1,0 +1,498 @@
+[gd_scene load_steps=40 format=2]
+
+[ext_resource path="res://Assets/hs/H_Sidespejl_-_L 1 u.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Lv1 knapper/V_Blink_Lys_-_M.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Lv1 knapper/Bremse_-_L.png" type="Texture" id=3]
+[ext_resource path="res://Assets/skabelon.png" type="Texture" id=4]
+[ext_resource path="res://Assets/vs/V_-_Sidespejl_-_Lu.png" type="Texture" id=5]
+[ext_resource path="res://Assets/?.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Font/nexa/Nexa-Heavy.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Assets/Lv1 knapper/H_Blink_Lys_-_M.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Lv1 knapper/Speed_-_L.png" type="Texture" id=9]
+[ext_resource path="res://Assets/bs/Backspejl_-_L 1.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Km (1).png" type="Texture" id=11]
+[ext_resource path="res://Assets/bs/Backspejl_-_L.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Lv1 knapper/Stop_-_L.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Lv1 knapper/Speed_-_M.png" type="Texture" id=14]
+[ext_resource path="res://Assets/V_-_Sidespejl_-_L_Gul (1).png" type="Texture" id=15]
+[ext_resource path="res://Assets/Fart_.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Lv1 knapper/Stop_-_M.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Lv1 knapper/H_Blink_Lys_-_L.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Lv1 knapper/V_Blink_Lys_-_L.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Lv1 knapper/Bremse_-_M.png" type="Texture" id=20]
+[ext_resource path="res://Assets/vs/V_-_Sidespejl_-_L 1.png" type="Texture" id=21]
+[ext_resource path="res://Assets/__-_M.png" type="Texture" id=22]
+[ext_resource path="res://Assets/Skive_.png" type="Texture" id=23]
+[ext_resource path="res://Assets/H_Sidespejl_-_L_Gul (1).png" type="Texture" id=24]
+[ext_resource path="res://Assets/hs/H_Sidespejl_-_Lu.png" type="Texture" id=25]
+[ext_resource path="res://Assets/yesstar.png" type="Texture" id=26]
+[ext_resource path="res://Assets/nostar.png" type="Texture" id=27]
+[ext_resource path="res://Assets/bane2bg.png" type="Texture" id=28]
+[ext_resource path="res://Assets/Pinky.png" type="Texture" id=29]
+[ext_resource path="res://Assets/Styr.png" type="Texture" id=30]
+[ext_resource path="res://Bane 2.gd" type="Script" id=31]
+[ext_resource path="res://Assets/Font/nexa/Nexa-ExtraLight.ttf" type="DynamicFontData" id=32]
+[ext_resource path="res://Assets/Sounds/videogame-menu-button-click.wav" type="AudioStream" id=33]
+[ext_resource path="res://Assets/Pinkym.png" type="Texture" id=34]
+
+[sub_resource type="DynamicFont" id=1]
+size = 19
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 100
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 13
+font_data = ExtResource( 32 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.85098, 0.843137, 0.843137, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+
+[node name="Bane 2" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 31 )
+
+[node name="baggrund" type="TextureRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+texture = ExtResource( 28 )
+
+[node name="bilindefra" type="TextureRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+texture = ExtResource( 4 )
+
+[node name="pbil" type="TextureButton" parent="."]
+margin_left = 193.0
+margin_top = 95.0
+margin_right = 547.0
+margin_bottom = 392.0
+texture_normal = ExtResource( 29 )
+texture_pressed = ExtResource( 34 )
+texture_hover = ExtResource( 34 )
+texture_disabled = ExtResource( 34 )
+
+[node name="bremse" type="TextureButton" parent="."]
+margin_left = 502.0
+margin_top = 534.0
+margin_right = 537.0
+margin_bottom = 568.0
+rect_scale = Vector2( 1.6, 1.6 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 20 )
+texture_hover = ExtResource( 20 )
+texture_disabled = ExtResource( 20 )
+
+[node name="speed" type="TextureButton" parent="."]
+margin_left = 576.0
+margin_top = 532.0
+margin_right = 594.0
+margin_bottom = 566.0
+rect_scale = Vector2( 1.6, 1.6 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 14 )
+texture_hover = ExtResource( 14 )
+texture_disabled = ExtResource( 14 )
+
+[node name="stop" type="TextureButton" parent="."]
+margin_left = 775.0
+margin_top = 440.0
+margin_right = 833.0
+margin_bottom = 492.0
+texture_normal = ExtResource( 13 )
+texture_pressed = ExtResource( 17 )
+texture_hover = ExtResource( 17 )
+texture_disabled = ExtResource( 17 )
+
+[node name="bakspejl" type="TextureButton" parent="."]
+margin_left = 365.0
+margin_right = 658.0
+margin_bottom = 91.0
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 12 )
+texture_hover = ExtResource( 12 )
+texture_disabled = ExtResource( 12 )
+
+[node name="ssv" type="TextureButton" parent="."]
+margin_top = 432.0
+margin_right = 173.0
+margin_bottom = 544.0
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 5 )
+
+[node name="ssh" type="TextureButton" parent="."]
+margin_left = 852.0
+margin_top = 432.0
+margin_right = 1023.0
+margin_bottom = 545.0
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 25 )
+texture_hover = ExtResource( 25 )
+texture_disabled = ExtResource( 25 )
+
+[node name="pilv" type="TextureButton" parent="."]
+margin_left = 400.0
+margin_top = 416.0
+margin_right = 458.0
+margin_bottom = 457.0
+texture_normal = ExtResource( 19 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 2 )
+texture_disabled = ExtResource( 2 )
+
+[node name="lysv" type="TextureRect" parent="pilv"]
+visible = false
+margin_left = -395.0
+margin_top = 39.0
+margin_right = -388.0
+margin_bottom = 102.0
+texture = ExtResource( 15 )
+
+[node name="pilh" type="TextureButton" parent="."]
+margin_left = 608.0
+margin_top = 416.0
+margin_right = 666.0
+margin_bottom = 457.0
+texture_normal = ExtResource( 18 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 8 )
+texture_disabled = ExtResource( 8 )
+
+[node name="lysv2" type="TextureRect" parent="pilh"]
+visible = false
+margin_left = 407.0
+margin_top = 38.0
+margin_right = 414.0
+margin_bottom = 101.0
+texture = ExtResource( 24 )
+
+[node name="\?" type="TextureButton" parent="."]
+margin_left = 183.0
+margin_top = 537.0
+margin_right = 580.0
+margin_bottom = 934.0
+rect_scale = Vector2( 0.15, 0.15 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 22 )
+texture_hover = ExtResource( 22 )
+
+[node name="spg" type="ColorRect" parent="."]
+visible = false
+margin_left = 216.0
+margin_top = 211.0
+margin_right = 808.0
+margin_bottom = 380.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="ColorRect" type="ColorRect" parent="spg"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 584.0
+margin_bottom = 162.0
+
+[node name="Label" type="Label" parent="spg"]
+margin_left = 22.0
+margin_top = 16.0
+margin_right = 569.0
+margin_bottom = 153.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Du kører 80 km/t og har lige indhentet den forankørende, 
+der kører ca. 60 km/t. Der kommer ingen kørende bagfra. 
+
+Hvad skal du være særlig opmærksom på? 
+Hvordan vil du fortsætte? Vælg de rigtige svar!"
+
+[node name="rat" type="TextureRect" parent="."]
+margin_left = 472.0
+margin_top = 408.0
+margin_right = 568.0
+margin_bottom = 501.0
+rect_scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 30 )
+
+[node name="fart" type="TextureRect" parent="."]
+margin_left = 288.0
+margin_top = 432.0
+margin_right = 553.0
+margin_bottom = 696.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 16 )
+
+[node name="fart2" type="TextureRect" parent="."]
+margin_left = 309.0
+margin_top = 465.0
+margin_right = 362.0
+margin_bottom = 545.0
+rect_rotation = -53.3
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 23 )
+
+[node name="hastighed" type="TextureRect" parent="."]
+margin_left = 695.0
+margin_top = 441.0
+margin_right = 960.0
+margin_bottom = 705.0
+rect_scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 11 )
+
+[node name="hasfart" type="Label" parent="hastighed"]
+margin_left = 59.9998
+margin_top = 44.9995
+margin_right = 203.0
+margin_bottom = 175.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "80"
+
+[node name="done" type="Button" parent="."]
+margin_left = 760.0
+margin_top = 552.0
+margin_right = 827.0
+margin_bottom = 584.0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_styles/normal = SubResource( 4 )
+text = "Færdig"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 12.0
+one_shot = true
+
+[node name="resultat" type="ColorRect" parent="."]
+margin_left = 151.0
+margin_top = 56.0
+margin_right = 878.0
+margin_bottom = 504.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="ColorRect" type="ColorRect" parent="resultat"]
+margin_left = 7.0
+margin_top = 8.0
+margin_right = 720.0
+margin_bottom = 440.0
+
+[node name="titel" type="Label" parent="resultat"]
+margin_left = 276.0
+margin_top = 24.0
+margin_right = 452.0
+margin_bottom = 49.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Overhaling: Bane 1"
+
+[node name="forklar" type="Label" parent="resultat"]
+margin_left = 17.0
+margin_top = 312.0
+margin_right = 707.0
+margin_bottom = 408.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Da kommer ingen kørende bagfra behøves vi ikke at dobbeltjekke i  bakspejlet og sidespejlene. Afstanden 
+mellem dig modkørende vurderes for at se om der er nok afstand til en sikker overhaling. Træk dig derfor over 
+mod midten og lån modkørendes bane. Siden du kører 80 km/t skal du ikke speede op, og lav en sikker 
+overhældning."
+
+[node name="rigtig" type="Label" parent="resultat"]
+margin_left = 113.0
+margin_top = 72.0
+margin_right = 231.0
+margin_bottom = 97.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Rigtige svar:"
+
+[node name="r2" type="Label" parent="resultat/rigtig"]
+margin_left = -56.0
+margin_top = 40.0
+margin_right = 172.0
+margin_bottom = 65.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "1) Venstre pil"
+
+[node name="r3" type="Label" parent="resultat/rigtig"]
+margin_left = -56.0
+margin_top = 68.0
+margin_right = 172.0
+margin_bottom = 93.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "2) Forankørende"
+
+[node name="forkert" type="Label" parent="resultat"]
+margin_left = 489.0
+margin_top = 72.0
+margin_right = 622.0
+margin_bottom = 97.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Forkerte svar:"
+
+[node name="f1" type="Label" parent="resultat/forkert"]
+margin_left = -48.0
+margin_top = 40.0
+margin_right = 180.0
+margin_bottom = 65.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "1) Bremse"
+
+[node name="f2" type="Label" parent="resultat/forkert"]
+margin_left = -48.0
+margin_top = 68.0
+margin_right = 180.0
+margin_bottom = 93.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "2) Højre pil"
+
+[node name="f3" type="Label" parent="resultat/forkert"]
+margin_left = -48.0
+margin_top = 96.0
+margin_right = 180.0
+margin_bottom = 121.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "3) Havariblink"
+
+[node name="f4" type="Label" parent="resultat/forkert"]
+margin_left = -48.0
+margin_top = 124.0
+margin_right = 180.0
+margin_bottom = 149.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "4) Bakspejl"
+
+[node name="f5" type="Label" parent="resultat/forkert"]
+margin_left = -48.0
+margin_top = 152.0
+margin_right = 180.0
+margin_bottom = 177.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "5) Venstre sidespejl"
+
+[node name="f6" type="Label" parent="resultat/forkert"]
+margin_left = -48.0
+margin_top = 180.0
+margin_right = 180.0
+margin_bottom = 205.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "6) Højre sidespejl"
+
+[node name="r1" type="Label" parent="resultat/forkert"]
+margin_left = -48.0
+margin_top = 208.0
+margin_right = 180.0
+margin_bottom = 233.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "7) Speederen"
+
+[node name="afslut" type="Button" parent="resultat"]
+margin_left = 293.0
+margin_top = 391.0
+margin_right = 429.0
+margin_bottom = 423.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_styles/normal = SubResource( 5 )
+text = "Afslut"
+
+[node name="stjn1" type="TextureRect" parent="resultat"]
+margin_left = 514.0
+margin_top = 384.0
+margin_right = 564.0
+margin_bottom = 434.0
+texture = ExtResource( 27 )
+
+[node name="stjn2" type="TextureRect" parent="resultat"]
+margin_left = 564.0
+margin_top = 384.0
+margin_right = 614.0
+margin_bottom = 434.0
+texture = ExtResource( 27 )
+
+[node name="stjn3" type="TextureRect" parent="resultat"]
+margin_left = 614.0
+margin_top = 384.0
+margin_right = 664.0
+margin_bottom = 434.0
+texture = ExtResource( 27 )
+
+[node name="stj1" type="TextureRect" parent="resultat"]
+visible = false
+margin_left = 514.0
+margin_top = 384.0
+margin_right = 564.0
+margin_bottom = 434.0
+texture = ExtResource( 26 )
+
+[node name="stj2" type="TextureRect" parent="resultat"]
+visible = false
+margin_left = 564.0
+margin_top = 384.0
+margin_right = 614.0
+margin_bottom = 434.0
+texture = ExtResource( 26 )
+
+[node name="stj3" type="TextureRect" parent="resultat"]
+visible = false
+margin_left = 614.0
+margin_top = 384.0
+margin_right = 664.0
+margin_bottom = 434.0
+texture = ExtResource( 26 )
+
+[node name="click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 33 )
+
+[connection signal="pressed" from="pbil" to="." method="_on_pbil_pressed"]
+[connection signal="pressed" from="bremse" to="." method="_on_bremse_pressed"]
+[connection signal="pressed" from="speed" to="." method="_on_speed_pressed"]
+[connection signal="pressed" from="stop" to="." method="_on_stop_pressed"]
+[connection signal="pressed" from="bakspejl" to="." method="_on_bakspejl_pressed"]
+[connection signal="pressed" from="ssv" to="." method="_on_ssv_pressed"]
+[connection signal="pressed" from="ssh" to="." method="_on_ssh_pressed"]
+[connection signal="pressed" from="pilv" to="." method="_on_pilv_pressed"]
+[connection signal="pressed" from="pilh" to="." method="_on_pilh_pressed"]
+[connection signal="pressed" from="?" to="." method="_on__pressed"]
+[connection signal="pressed" from="done" to="." method="_on_done_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="resultat/afslut" to="." method="_on_afslut_pressed"]
