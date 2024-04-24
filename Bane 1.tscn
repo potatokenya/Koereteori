@@ -331,7 +331,6 @@ wait_time = 12.0
 one_shot = true
 
 [node name="resultat" type="ColorRect" parent="."]
-visible = false
 margin_left = 151.0
 margin_top = 56.0
 margin_right = 878.0
@@ -423,7 +422,7 @@ margin_bottom = 177.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "5) Bakkespejl"
+text = "5) Bakspejl"
 
 [node name="r6" type="Label" parent="resultat/rigtig"]
 margin_left = -54.0
