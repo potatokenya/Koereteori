@@ -50,7 +50,7 @@ func _http_request_completed(_result, _response_code, _headers, _body):
 	
 	if(lastCommand == "signup"):
 		if response['error'] == "none":
-			$status.set_text("New bruger oprettet")
+			$status.set_text("Ny bruger oprettet")
 			$TextEdit.set_text("New user added")
 			$pil.show()
 			$status.set("custom_colors/font_color", Color( 0, 1, 0, 1 ))
