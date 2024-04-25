@@ -138,13 +138,13 @@ size = 17
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=28]
-size = 70
-font_data = ExtResource( 6 )
-
 [sub_resource type="DynamicFont" id=31]
 size = 25
 outline_color = Color( 0.101961, 0.101961, 0.101961, 1 )
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=28]
+size = 70
 font_data = ExtResource( 6 )
 
 [node name="levelmenu" type="Control"]
@@ -327,6 +327,26 @@ one_shot = true
 [node name="Timer2" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
+
+[node name="Sprite" type="TextureRect" parent="."]
+margin_left = 840.0
+margin_top = 496.0
+margin_right = 1530.0
+margin_bottom = 858.0
+rect_rotation = 19.8
+rect_scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 35 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 840.0
+margin_top = 488.0
+margin_right = 992.0
+margin_bottom = 521.0
+rect_rotation = 6.6
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 31 )
+text = "Læs tutorial"
 
 [node name="bane1" type="TextureRect" parent="."]
 visible = false
@@ -573,26 +593,6 @@ text = "Log ud"
 
 [node name="click" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 33 )
-
-[node name="Sprite" type="TextureRect" parent="."]
-margin_left = 840.0
-margin_top = 496.0
-margin_right = 1530.0
-margin_bottom = 858.0
-rect_rotation = 19.8
-rect_scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 35 )
-
-[node name="Label" type="Label" parent="."]
-margin_left = 840.0
-margin_top = 488.0
-margin_right = 971.0
-margin_bottom = 521.0
-rect_rotation = 6.6
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 31 )
-text = "Læs tutorial"
 
 [node name="help" type="TextureRect" parent="."]
 visible = false

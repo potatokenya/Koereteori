@@ -46,8 +46,6 @@ func _http_request_completed(_result, _response_code, _headers, _body):
 	#	printerr("We returned error: " + response['error'])
 	#	return
 	
-	
-	
 	if(lastCommand == "signup"):
 		if response['error'] == "none":
 			$status.set_text("Ny bruger oprettet")
@@ -63,8 +61,8 @@ func _http_request_completed(_result, _response_code, _headers, _body):
 	if(lastCommand == "login"):
 		if response['error'] == "none":
 			Global.username_global = $bnli.get_text()
-			$TextEdit.set_text("Login fuldført")
-			$status.set_text("Login succesfull")
+			$TextEdit.set_text("Login succesfull")
+			$status.set_text("Login fuldført")
 			$status.set("custom_colors/font_color", Color( 0, 1, 0, 1 ))
 			$Timer.start()
 			
@@ -137,7 +135,7 @@ func _get_score():
 	$click.play()
 	lastCommand = "getscore"
 	var command = "get_score"
-	var username_global = $PlayerName
+	#var username_global = $PlayerName
 	var username = Global.username_global
 	#$kort2.show()
 	
@@ -155,12 +153,12 @@ func _get_score():
 		th = 0
 		print(th)
 
-func _get_player():
-	$click.play()
-	var user_id = $ID.get_text()
-	var command = "get_player"
-	var data = {"user_id" : user_id}
-	request_queue.push_back({"command" : command, "data" : data})
+#func _get_player():
+	#$click.play()
+	#var user_id = $ID.get_text()
+	#var command = "get_player"
+	#var data = {"user_id" : user_id}
+	#request_queue.push_back({"command" : command, "data" : data})
 
 func _signup():
 	$click.play()
